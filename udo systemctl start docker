@@ -1,0 +1,21 @@
+[0;1;32m●[0m docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: [0;1;32mactive (running)[0m since Sat 2024-08-17 18:25:19 IST; 3min 8s ago
+TriggeredBy: [0;1;32m●[0m docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 41957 (dockerd)
+      Tasks: 14
+     Memory: 51.0M
+     CGroup: /system.slice/docker.service
+             └─41957 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+Aug 17 18:25:15 pmurugesan-lnx1 dockerd[41957]: time="2024-08-17T18:25:15.660043682+05:30" level=warning msg="Running experimental build"
+Aug 17 18:25:15 pmurugesan-lnx1 dockerd[41957]: time="2024-08-17T18:25:15.662234699+05:30" level=info msg="detected 127.0.0.53 nameserver, assuming systemd-resolved, so using resolv.conf: /run/systemd/resolve/resolv.conf"
+Aug 17 18:25:15 pmurugesan-lnx1 dockerd[41957]: time="2024-08-17T18:25:15.674530716+05:30" level=info msg="[graphdriver] trying configured driver: overlay2"
+Aug 17 18:25:16 pmurugesan-lnx1 dockerd[41957]: time="2024-08-17T18:25:16.153701912+05:30" level=info msg="Loading containers: start."
+Aug 17 18:25:16 pmurugesan-lnx1 dockerd[41957]: time="2024-08-17T18:25:16.260916272+05:30" level=info msg="Default bridge (docker0) is assigned with an IP address 192.168.0.0/20. Daemon option --bip can be used to set a preferred IP address"
+Aug 17 18:25:16 pmurugesan-lnx1 dockerd[41957]: time="2024-08-17T18:25:16.294480920+05:30" level=info msg="Loading containers: done."
+Aug 17 18:25:16 pmurugesan-lnx1 dockerd[41957]: time="2024-08-17T18:25:16.306874336+05:30" level=info msg="Docker daemon" commit=1a79695 graphdriver=overlay2 version=24.0.6
+Aug 17 18:25:16 pmurugesan-lnx1 dockerd[41957]: time="2024-08-17T18:25:16.306934505+05:30" level=info msg="Daemon has completed initialization"
+Aug 17 18:25:19 pmurugesan-lnx1 dockerd[41957]: time="2024-08-17T18:25:19.958985365+05:30" level=info msg="API listen on /run/docker.sock"
+Aug 17 18:25:19 pmurugesan-lnx1 systemd[1]: Started Docker Application Container Engine.

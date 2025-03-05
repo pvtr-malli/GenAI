@@ -1,0 +1,41 @@
+4 - study about reat api and rag more
+5 - cretae a mechanisum to find the documnet uploaded is new or the old one itself. (for now it's creating the db everytime)
+6 - update the readme
+7 - Make a mechanisum to upload more documnet at the same time.
+8 - if i have time maybe logging for better error handling.
+
+
+UI: improment
+1 - add a loader each time when someone ask question.
+
+# workdir
+- this will set the working directory , this will affect the copy add and run commands after this line.
+```
+WORKDIR /app
+COPY ./docker_backend/requirements.txt requirements.txt    # ths fille will get copied in /app/requirements.txt
+
+```
+
+# 2 . even after installing also the import will fail because, you installed tha package in python3.9 but it uses python3.8 (default). need to fix this.
+```
+ModuleNotFoundError: No module named 'long_chain'
+```
+
+# 3. you need to expose the ports to access it outside
+```
+docker run -d --name "noso_api" -p 127.0.0.1:8000:8000  pavithra495/pdf_qa_api
+docker run -d --name "noso_ui" -p 127.0.0.1:3000:3000  pavithra495/pdf_qa_ui
+
+```
+
+# 4.
+sudo docker build --tag "noso_api" --file ./docker_backend/Dockerfile .
+sudo docker build --tag "noso_ui" --file ./docker_frontend/Dockerfile .
+
+# 5 to remove the containers
+sudo docker container rm 3c9220418ac8 -f
+
+
+  Local:            http://localhost:3001
+  On Your Network:  http://192.168.0.3:3001
+Developed a containerized web application where users can upload PDFs and ask questions. Integrated a Retrieval-Augmented Generation (RAG) system using LangChain to store document data in a vector database, retrieve relevant information, and feed it to an LLM for answer generation. Built the frontend using React.js.
